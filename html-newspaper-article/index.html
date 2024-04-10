@@ -29,9 +29,10 @@
 				<p>Hygge, a Danish word pronounced “hyoo-gah,” is a lifestyle that embraces coziness and the calm of life. You want to feel comfortable in your own home, and following a <a href="https://blog.smartfurniture.com/what-does-it-mean-to-live-a-hygge-lifestyle">hygge lifestyle</a> will let you relax — no more worrying about what other people may think about you or your home. You want your home to be welcoming and inviting, not necessarily look perfect on social media.
 					To live a hygge lifestyle, all you need to do is prioritize human connection over gadgets or any other distractions. Building a comfortable home is the best way to focus on the things you love while avoiding the things that don’t make you happy. Focus on soft things that bring you comfort, and decorate every inch of your house with purpose — including your backyard.
 				</p>
-				<video controls autoplay>
-					<source src="./assets/video/production ID_3773486_sm.mp4" type="video/mp4"/>
-					<source src="./assets/video/production ID_3773486_lg.mp4" type="video/mp4"/>
+				<video controls autoplay muted loop>
+					<source src="./assets/video/production ID_3773486_sm.mp4" type="video/mp4" media="(max-width:700px)"/>
+					<source src="./assets/video/production ID_3773486_lg.mp4" type="video/mp4" media="(max-width:2000px)"/>
+					Your browser does not support the video tag.
 				</video>
 			</section>
 			<section class="second_article">
@@ -68,7 +69,7 @@
 			</div>
 			<div class="form_field">
 				<label for="Email">Email</label>
-				<input required="true" type="email" name="Email" id="Email" pattern: [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$>
+				<input required="true" type="email" name="Email" id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 				<div class="form_field">
 				<label for="Website">Website</label>
 				<textarea name="Website" id="Website" cols="30" rows="2"></textarea>
@@ -77,7 +78,9 @@
 				<label for="savedata">Save my name, email, and website in this browser for the next time I comment.</label>
 				<input required="true" type="checkbox" name="savedata" id="savedata">
 			</div>	
-				<input type="button" value="Post a Comment">
+			<div class="form_field form_field--button">
+			<input type="submit" value="Post a Comment">
+			</div>
 			
 			</form>
 		</main>

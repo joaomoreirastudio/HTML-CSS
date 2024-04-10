@@ -38,4 +38,32 @@ a {
 }
 .form_field--inline{
     flex-direction: row;    
+    margin: auto;
+}
+
+.form_field--button{
+    min-width: 50px;
+    max-width: 150px;
+    margin: auto;    
+}
+
+.form_field--button input{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 15px;
+}
+
+.form_field--button input:hover{
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 15px;
+}
+
+.form_field--button input:active{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 15px;
 }
