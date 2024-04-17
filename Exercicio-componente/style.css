@@ -50,6 +50,11 @@ main{
 
 }
 
+.dot--icon:hover{
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
 .dot{
     height: 2px;
     width: 2px;
@@ -73,6 +78,10 @@ main{
     border-radius: 25px;
     padding: 10px 10px 10px 10px;
 }
+.btn:hover {
+    background-color: black;
+    color: white;
+}
 
 .btn--tab{
     border: none;
@@ -95,7 +104,7 @@ main{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 12vh;
+    height: 100px;
     margin-top: 10px;
 }
 
@@ -111,8 +120,6 @@ p.expenses--value{
     color: black;
 
 }
-
-
 
 .board__category__content{
     display: flex;
