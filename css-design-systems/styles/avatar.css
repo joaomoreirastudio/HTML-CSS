@@ -1,0 +1,19 @@
+.avatar__image img{
+    border-radius: 4px;
+    width: 100%;
+}
+
+.avatar--sm{
+    width: 24px;
+    height: 24px;
+}
+    
+.avatar--md{
+    width: 32px;
+    height: 32px;
+}
+
+.avatar--lg{
+    width: 48px;
+    height: 48px;
+}

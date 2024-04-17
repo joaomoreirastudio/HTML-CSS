@@ -1,0 +1,77 @@
+.btn{
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border:none;
+    cursor: pointer;
+}
+
+.button--primary{
+    background-color: #0070D2;
+    color: white;
+}
+
+.feather{
+    fill: white;
+    stroke: none;
+}
+
+.zap--blue{
+    fill: #0070D2;
+}
+
+.button--primary:hover{
+    background-color: #005FB2;
+}
+
+.button--primary:focus{
+    background-color: #005FB2;
+    box-shadow: 0px 0px 4px #005FB2;
+}
+
+.button--primary:disabled, .button--primary--destructive:disabled, .button--primary--success:disabled{
+    background-color: #C9C7C5;
+    
+}
+
+.button__text{
+    vertical-align: auto;
+    margin: 0 15px 0 15px;
+}
+
+.button--primary--brand--outline{
+    background-color: white;
+    border: 1px solid #0070D2;
+}
+
+.button--primary--destructive{
+    background-color: #C23934;
+    color: white;
+}
+
+.button--primary--destructive:hover{
+    background-color: #A61A14;
+}
+
+.button--primary--destructive:focus{
+    background-color: #A61A14;
+    box-shadow: 0px 0px 4px #005FB2;
+}
+
+.button--primary--success{
+    background-color: #4BCA81;
+    color: black;
+}
+
+.button--primary--success:hover{
+    background-color: #04844B;
+    color: white;
+}
+
+.button--primary--success:focus{
+    background-color: #04844B;
+    color: white;
+    box-shadow: 0px 0px 4px #005FB2;
+}
