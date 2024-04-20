@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap');
+*{
+    font-family: Martian Mono;
+}
+
+body{
+    background-color: rgb(182,85,0);
+    background: linear-gradient(90deg, rgba(182,0,0,1) 5%, rgba(164,0,164,1) 46%, rgba(0,11,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+
+.card{
+    width: 250px;
+    height: 430px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.20);
+    position: relative;
+    animation-duration: 3s;
+    animation-name: bounce;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes bounce {
+    from {
+      transform: rotate(5deg)
+    }
+  
+    to {
+        transform: rotate(-5deg)
+    }
+  }
+
+
+.card__container--orange{
+    background: rgb(255,0,0);
+    background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 58%, rgba(255,240,0,20) 100%);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    height: 75%;
+
+    
+}
+
+.card__container--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 5px 10px;
+}
+
+.card__container--header img{
+    width: 40px;
+    
+}
+
+.card__container--header span{
+    font-size: 14px;
+    color: white;
+}
+
+.card__container--details{
+    padding: 10px 10px 0 10px;
+    
+}
+
+.card__container--details h2{
+    font-size: 14px;
+    color: white;
+    font-weight: 200;
+    padding-bottom: 5%;
+}
+
+.card__container--details p{
+    color: white;
+    font-size: 8px;
+    font-weight: 200;
+    
+}
+.card--backdrop{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card--backdrop span{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 140px;
+    font-weight: 500;
+    padding-left: 15px;
+
+}
+.card__nike__shoe{
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+    z-index: 1;
+   
+}
+.card__nike__shoe img{
+    width: 275px;
+    height: auto;
+    
+}
+.card__container--footer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10%;
+    width: 100%;
+    height: 25%;
+    z-index: 2;
+
+}
+.card__container--footer span{
+   font-size: 14px;
+   color: gainsboro;
+   padding-bottom: 10px;
+
+}
+.btn{
+    width: 100px;
+    height: 40px;
+}
+
+.btn--card{
+    background: white;
+    border: 1px solid blue;
+    border-radius: 25px;
+    color: blue;
+}
+.btn--card:hover{
+    background: blue;
+    color: white;
+}
