@@ -1,0 +1,115 @@
+span{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    display: block;
+    padding-bottom: 5%;
+}
+body{
+    background: palevioletred;
+    height: 100vh;
+    width: clamp(300px, 100%, 600px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.perspective{
+    transform: skew(-30deg);
+
+}
+.box{
+    background: blue;
+    height: 100px;
+    width: 150px;
+    border-radius: 5%;
+    animation-name: perspective;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;    
+    
+}
+
+@keyframes perspective{
+    to {
+        transform: translate(-10%, -25%);
+        box-shadow: 10px 30px 20px rgb(152, 57, 66);
+    }
+}
+
+.breakline{
+    border: 1px solid white;
+    width: 100%;
+    margin: 10% 10%;
+}
+
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+
+}
+.loading__bar{
+    width: calc(100%/4);
+    height: 10px;
+    background-color: white;
+    border-radius: 25px;
+    
+}
+
+.loading__bar::after{
+    content: '';
+    display: block;
+    height: 10px;
+    border-radius: 25px;
+    background-color: white;
+    animation-name: loading;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: infinite;
+}
+.loading__bar:nth-child(1):after{
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    
+
+}
+.loading__bar:nth-child(2):after{
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.loading__bar:nth-child(3):after{
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+.loading__bar:nth-child(4):after{
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes loading {
+    from{ width: 0%;
+        background-color: blueviolet;
+
+    }
+    to{
+        width: 100%;
+        background-color: blueviolet;
+    }
+}
