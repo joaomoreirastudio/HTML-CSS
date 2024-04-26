@@ -45,6 +45,7 @@ header .header__subtitle {
   font-weight: 600;
   color: white;
 }
+
 .articles__group {
   display: flex;
   align-items: center;
