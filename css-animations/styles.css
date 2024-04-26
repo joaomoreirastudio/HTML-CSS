@@ -3,10 +3,9 @@ body {
     height: 100vh;
     width: clamp(300px, 100%, 600px);
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 15% auto 15% auto;
+    margin: 5% auto 5% auto;
 }
 
 .title__exercise {
@@ -52,7 +51,7 @@ body {
 .breakline {
     border: 1px solid white;
     width: 100%;
-    margin: 15%;
+    margin: 15% 15%;
 }
 
 .second__exercise {
