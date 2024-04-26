@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+    font-family: Inter;
+}
+$type-yellow: #faff00;
+body {
+    background: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+header {
+    color: $type-yellow;
+    text-align: center;
+    .header__title {
+        font-weight: 600;
+        font-size: 40px;
+    }
+    .header__subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        font-style: italic;
+    }
+}
+
+.nav__articles {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    .nav__categories--list {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        list-style-type: none;
+        gap: 32px;
+        .nav__categories--item {
+            font-weight: 600;
+            color: white;
+        }
+        .nav__categories--item--special {
+            // font-weight: 600;
+            // color: white;
+            // position: absolute;
+            // right: 0;
+        }
+    }
+}
+.articles__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    .articles__group__item {
+        background: #404040;
+        border: 1px solid #5e5e5e;
+        border-radius: 8px;
+        max-width: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        img {
+            width: 100px;
+            height: 40%;
+        }
+        .article__content {
+            font-size: 14px;
+            color: white;
+            font-style: 600;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            padding: 0;
+            .article__title {
+                font-weight: 600;
+            }
+
+            .article__text {
+                font-weight: 400;
+            }
+            .article__date {
+                color: #307bec;
+                font-weight: 600;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+    body {
+        max-width: 900px;
+    }
+    .nav__articles {
+        justify-content: flex-start;
+        position: relative;
+        .nav__categories--item--special {
+            font-weight: 600;
+            color: white;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
