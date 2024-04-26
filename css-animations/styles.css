@@ -1,52 +1,67 @@
-span{
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
-    display: block;
-    padding-bottom: 5%;
-}
-body{
-    background: palevioletred;
+body {
+    background: rgb(255, 140, 123);
     height: 100vh;
     width: clamp(300px, 100%, 600px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: auto;
+    margin: 15% auto 15% auto;
 }
 
-.perspective{
+.title__exercise {
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    display: block;
+    padding-bottom: 5%;
+    opacity: 0.5;
+}
+.first__exercise {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.perspective {
     transform: skew(-30deg);
-
+    padding-top: 20%;
 }
-.box{
-    background: blue;
+.box {
+    background: blueviolet;
     height: 100px;
     width: 150px;
     border-radius: 5%;
     animation-name: perspective;
     animation-iteration-count: infinite;
     animation-duration: 2s;
-    animation-direction: alternate-reverse;    
-    
+    animation-direction: alternate-reverse;
 }
 
-@keyframes perspective{
+@keyframes perspective {
     to {
         transform: translate(-10%, -25%);
         box-shadow: 10px 30px 20px rgb(152, 57, 66);
     }
 }
 
-.breakline{
+.breakline {
     border: 1px solid white;
     width: 100%;
-    margin: 10% 10%;
+    margin: 15%;
 }
 
-.progress{
+.second__exercise {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.progress {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,62 +69,208 @@ body{
     gap: 10px;
     width: 100%;
     position: relative;
-
 }
-.loading__bar{
-    width: calc(100%/4);
+.progress__bar {
+    width: calc(100% / 4);
     height: 10px;
     background-color: white;
     border-radius: 25px;
-    
 }
 
-.loading__bar::after{
-    content: '';
+.progress__bar::after {
+    content: "";
     display: block;
     height: 10px;
     border-radius: 25px;
     background-color: white;
-    animation-name: loading;
+    animation-name: progress;
     animation-direction: normal;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-duration: infinite;
 }
-.loading__bar:nth-child(1):after{
-    animation-name: loading;
+.progress__bar:nth-child(1):after {
+    animation-name: progress;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    
-
 }
-.loading__bar:nth-child(2):after{
-    animation-name: loading;
+.progress__bar:nth-child(2):after {
+    animation-name: progress;
     animation-duration: 2s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 }
-.loading__bar:nth-child(3):after{
-    animation-name: loading;
+.progress__bar:nth-child(3):after {
+    animation-name: progress;
     animation-duration: 2s;
     animation-delay: 4s;
     animation-fill-mode: forwards;
 }
-.loading__bar:nth-child(4):after{
-    animation-name: loading;
+.progress__bar:nth-child(4):after {
+    animation-name: progress;
     animation-duration: 2s;
     animation-delay: 6s;
     animation-fill-mode: forwards;
 }
 
-
-@keyframes loading {
-    from{ width: 0%;
+@keyframes progress {
+    from {
+        width: 0%;
         background-color: blueviolet;
-
     }
-    to{
+    to {
         width: 100%;
         background-color: blueviolet;
+    }
+}
+.third__exercise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    width: 50px;
+    aspect-ratio: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.loading__balls {
+    width: 15px;
+    aspect-ratio: 1;
+    background: blueviolet;
+    position: absolute;
+    border-radius: 15px;
+    animation: loading__balls;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes loading__balls {
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.loading__balls:nth-child(1) {
+    content: "";
+    transform: translate(-15px, -15px);
+}
+
+.loading__balls:nth-child(2) {
+    content: "";
+    transform: translate(15px, -15px);
+}
+.loading__balls:nth-child(3) {
+    content: "";
+    transform: translate(-15px, 15px);
+}
+
+.loading__balls:nth-child(4) {
+    content: "";
+    transform: translate(15px, 15px);
+}
+
+.appear {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.appear__text {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    transform: translateY(-15px);
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.appear__text:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.appear__text:nth-child(2) {
+    animation-delay: 1s;
+}
+.appear__text:nth-child(3) {
+    animation-delay: 1.5s;
+}
+.appear__text:nth-child(4) {
+    animation-delay: 2s;
+}
+.appear__text:nth-child(5) {
+    animation-delay: 2.5s;
+}
+.appear__text:nth-child(6) {
+    animation-delay: 3s;
+}
+@keyframes appear {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fifth__exercise {
+    width: 100%;
+}
+
+.pause {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    height: 70px;
+    position: relative;
+    width: 100%;
+}
+
+.pause--line {
+    border: 0.5px solid black;
+    width: 100%;
+    top: 0;
+}
+
+.pause--box {
+    background: blueviolet;
+    width: 50px;
+    aspect-ratio: 1;
+    animation-name: box__pause;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+    position: absolute;
+    transform: translate(275px, 10px);
+}
+.pause--box:hover {
+    animation-play-state: paused;
+}
+@keyframes box__pause {
+    to {
+        transform: translate(-275px, 10px);
     }
 }
