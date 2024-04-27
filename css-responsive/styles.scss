@@ -9,13 +9,19 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: auto;
     margin: 0 auto;
+    position: relative;
 }
 header {
     color: $type-yellow;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     .header__title {
         font-weight: 600;
         font-size: 40px;
@@ -24,7 +30,15 @@ header {
         font-weight: 400;
         font-size: 24px;
         font-style: italic;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 80%;
     }
+}
+
+.articles {
+    height: 100%;
+    position: relative;
 }
 
 .nav__articles {
@@ -32,22 +46,25 @@ header {
     display: flex;
     align-content: center;
     justify-content: center;
+
     .nav__categories--list {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: row;
         list-style-type: none;
         gap: 32px;
+        padding: 0;
         .nav__categories--item {
             font-weight: 600;
             color: white;
         }
-        // .nav__categories--item--special {
-        //     // font-weight: 600;
-        //     // color: white;
-        //     // position: absolute;
-        //     // right: 0;
-        // }
+        .nav__categories--item--special {
+            font-weight: 600;
+            position: absolute;
+            bottom: 0;
+            color: $type-yellow;
+        }
     }
 }
 .articles__group {
@@ -57,6 +74,9 @@ header {
     flex-direction: column;
     gap: 20px;
     padding: 10px;
+    position: absolute;
+    margin: 0;
+
     .articles__group__item {
         background: #404040;
         border: 1px solid #5e5e5e;
@@ -66,30 +86,34 @@ header {
         align-items: center;
         justify-content: center;
         gap: 13px;
+        width: 100%;
         img {
             width: 100px;
             height: 40%;
         }
         .article__content {
-            font-size: 14px;
             color: white;
             font-style: 600;
             display: flex;
             flex-direction: column;
             gap: 5px;
-
-            padding: 0;
+            padding: 10px;
             .article__title {
                 font-weight: 600;
+                margin: 0;
+                font-size: 14px;
             }
 
             .article__text {
                 font-weight: 400;
+                margin: 0;
+                font-size: 14px;
             }
             .article__date {
                 color: #307bec;
                 font-weight: 600;
                 font-size: 12px;
+                margin: 0;
             }
         }
     }
@@ -98,15 +122,64 @@ header {
 @media all and (min-width: 768px) {
     body {
         max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .nav__articles {
-        justify-content: flex-start;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 5%;
+        .header__subtitle {
+            width: 593px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    .articles__group {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: center;
         position: relative;
-        .nav__categories--item--special {
-            font-weight: 600;
-            color: white;
-            position: absolute;
-            bottom: 0;
+        .articles__group__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // img {
+            // }
+        }
+    }
+    .articles {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .nav__articles {
+            width: 100%;
+
+            .nav__categories--list {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0 10px 0 10px;
+                .nav__categories--item--special {
+                    color: white;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding-right: 10px;
+                }
+            }
         }
     }
 }
