@@ -39,6 +39,7 @@ header .header__subtitle {
 .articles {
   height: 100%;
   position: relative;
+  width: 100%;
 }
 
 .nav__articles {
@@ -46,6 +47,13 @@ header .header__subtitle {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+.nav__articles .nav__categories--list--right {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 .nav__articles .nav__categories--list {
   display: flex;
@@ -62,19 +70,18 @@ header .header__subtitle {
 }
 .nav__articles .nav__categories--list .nav__categories--item--special {
   font-weight: 600;
-  position: absolute;
-  bottom: 0;
   color: #faff00;
+  display: none;
 }
 
 .articles__group {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
   padding: 10px;
-  position: absolute;
   margin: 0;
 }
 .articles__group .articles__group__item {
@@ -84,13 +91,17 @@ header .header__subtitle {
   max-width: 380px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 13px;
+  justify-content: space-around;
   width: 100%;
 }
-.articles__group .articles__group__item img {
+.articles__group .articles__group__item .article__image {
+  position: relative;
+  left: -14px;
+}
+.articles__group .articles__group__item .article__image img {
   width: 100px;
   height: 40%;
+  border-radius: 8px;
 }
 .articles__group .articles__group__item .article__content {
   color: white;
@@ -98,7 +109,7 @@ header .header__subtitle {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 .articles__group .articles__group__item .article__content .article__title {
   font-weight: 600;
@@ -109,12 +120,29 @@ header .header__subtitle {
   font-weight: 400;
   margin: 0;
   font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .articles__group .articles__group__item .article__content .article__date {
   color: #307bec;
   font-weight: 600;
   font-size: 12px;
   margin: 0;
+  padding: 5px 0;
+}
+
+.view__more__articles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.view__more__articles .nav__categories--item--special {
+  font-weight: 600;
+  color: #faff00;
 }
 
 @media all and (min-width: 768px) {
@@ -142,12 +170,43 @@ header .header__subtitle {
     justify-content: center;
     flex-direction: row;
     justify-content: center;
-    position: relative;
   }
   .articles__group .articles__group__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
+  }
+  .articles__group .articles__group__item .article__image {
+    width: 100%;
+    height: 130px;
+    border-radius: 8px;
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+  }
+  .articles__group .articles__group__item .article__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .articles__group .articles__group__item .article__content {
+    gap: 13px;
+    padding: 10px;
+  }
+  .articles__group .articles__group__item .article__content .article__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .articles__group .articles__group__item .article__content .article__date {
+    padding: 10px 0;
   }
   .articles {
     width: 100%;
@@ -158,21 +217,27 @@ header .header__subtitle {
     flex-direction: column;
   }
   .articles .nav__articles {
-    width: 100%;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .articles .nav__articles .nav__categories--list {
-    position: relative;
-    width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    padding: 0 10px 0 10px;
   }
   .articles .nav__articles .nav__categories--list .nav__categories--item--special {
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: 10px;
+    color: #faff00;
+    display: initial;
+    justify-content: flex-end;
+  }
+  .articles .nav__articles .nav__categories--list .nav__categories--item--special {
+    color: #faff00;
+    display: initial;
+    justify-content: flex-end;
+  }
+  .view__more__articles {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
