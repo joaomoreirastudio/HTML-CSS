@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  width: 100%;
+}
+.nav__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav__logo {
+  width: 50px;
+  display: inline-block;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  flex-direction: row;
+}/*# sourceMappingURL=styles.css.map */
