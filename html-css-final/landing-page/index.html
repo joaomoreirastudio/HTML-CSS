@@ -6,13 +6,13 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <main>
+        <header>
             <nav class="nav">
                 <div class="nav__left">
                     <div class="nav__logo">
                         <a href="#"><img src="./assets/logo.png" alt="" /></a>
                     </div>
-                    <ul class="nav__list">
+                    <ul class="nav__list mobile__hide">
                         <li class="nav__item">Pricing</li>
                         <li class="nav__item">About</li>
                         <li class="nav__item">Tutorials</li>
@@ -21,9 +21,28 @@
                 </div>
                 <ul class="nav__list nav__list--login">
                     <li class="nav__item">Sign in</li>
-                    <li class="nav__item">Sign up</li>
+                    <li class="nav__item nav__item--signup">Sign up</li>
                 </ul>
             </nav>
+        </header>
+        <main>
+            <section class="intro">
+                <div class="intro__container">
+                    <h1 class="intro__container__title">
+                        Make your website wonderful
+                    </h1>
+                    <p class="intro__container__text">
+                        Our landing page template works on all devices, so you
+                        only have to set it up once, and get beautiful results
+                        forever.
+                    </p>
+                    <div class="intro__container__btn">
+                        <button class="btn btn--trial">Set a free trial</button>
+                        <button class="btn btn--learn">Learn More</button>
+                    </div>
+                    <div class="intro__container__video"></div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
