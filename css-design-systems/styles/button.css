@@ -1,77 +1,91 @@
-.btn{
+.btn {
     border-radius: 4px;
     padding: 4px 8px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border:none;
+    border: none;
     cursor: pointer;
 }
 
-.button--primary{
-    background-color: #0070D2;
+.button--primary {
+    background-color: #0070d2;
     color: white;
 }
 
-.feather{
+.feather {
     fill: white;
     stroke: none;
 }
 
-.zap--blue{
-    fill: #0070D2;
+.zap--blue {
+    fill: #0070d2;
 }
 
-.button--primary:hover{
-    background-color: #005FB2;
+.button--primary:hover {
+    background-color: #005fb2;
 }
 
-.button--primary:focus{
-    background-color: #005FB2;
-    box-shadow: 0px 0px 4px #005FB2;
+.button--primary:focus {
+    background-color: #005fb2;
+    box-shadow: 0px 0px 4px #005fb2;
 }
 
-.button--primary:disabled, .button--primary--destructive:disabled, .button--primary--success:disabled{
-    background-color: #C9C7C5;
-    
+.button--primary:disabled,
+.button--primary--destructive:disabled,
+.button--primary--success:disabled {
+    background-color: #c9c7c5;
 }
 
-.button__text{
+.button__text {
     vertical-align: auto;
     margin: 0 15px 0 15px;
 }
 
-.button--primary--brand--outline{
+.button--primary--brand--outline {
     background-color: white;
-    border: 1px solid #0070D2;
+    border: 1px solid #0070d2;
+}
+.button--primary--brand--outline:hover {
+    background-color: #f4f6f9;
 }
 
-.button--primary--destructive{
-    background-color: #C23934;
+.button--primary--brand--outline:focus {
+    box-shadow: 0px 0px 4px #005fb2;
+}
+.button--primary--brand--outline:disabled,
+.zap--blue:disabled {
+    background-color: white;
+    color: #dddbda;
+    border: 1px solid #dddbda;
+    fill: #dddbda;
+}
+.button--primary--destructive {
+    background-color: #c23934;
     color: white;
 }
 
-.button--primary--destructive:hover{
-    background-color: #A61A14;
+.button--primary--destructive:hover {
+    background-color: #a61a14;
 }
 
-.button--primary--destructive:focus{
-    background-color: #A61A14;
-    box-shadow: 0px 0px 4px #005FB2;
+.button--primary--destructive:focus {
+    background-color: #a61a14;
+    box-shadow: 0px 0px 4px #005fb2;
 }
 
-.button--primary--success{
-    background-color: #4BCA81;
+.button--primary--success {
+    background-color: #4bca81;
     color: black;
 }
 
-.button--primary--success:hover{
-    background-color: #04844B;
+.button--primary--success:hover {
+    background-color: #04844b;
     color: white;
 }
 
-.button--primary--success:focus{
-    background-color: #04844B;
+.button--primary--success:focus {
+    background-color: #04844b;
     color: white;
-    box-shadow: 0px 0px 4px #005FB2;
+    box-shadow: 0px 0px 4px #005fb2;
 }
