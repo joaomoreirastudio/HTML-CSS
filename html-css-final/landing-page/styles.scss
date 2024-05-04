@@ -51,12 +51,20 @@ $border-gray-nav: #dfdfdf;
         display: none;
     }
 }
+.btn {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 16px;
+    font-family: inter;
+    border: none;
+}
 
 .intro {
     padding: 46px 10px;
     &__container {
         @include flex(center, center);
         flex-direction: column;
+        width: 100%;
         &__title,
         h1 {
             font-weight: 700;
@@ -77,13 +85,6 @@ $border-gray-nav: #dfdfdf;
         &__btn {
             @include flex(center, center);
             gap: 24px;
-            .btn {
-                font-size: 14px;
-                font-weight: 400;
-                padding: 8px 16px;
-                font-family: inter;
-                border: none;
-            }
             .btn--trial {
                 background: $blue-color;
                 color: white;
@@ -92,6 +93,55 @@ $border-gray-nav: #dfdfdf;
                 background: $black-color;
                 color: white;
             }
+        }
+        &__video {
+            width: 100%;
+            padding: 24px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            video {
+                width: 100%;
+            }
+            .btn--watch--more {
+                border-radius: 32px;
+                background-color: $blue-color;
+                color: white;
+                position: absolute;
+                bottom: 3%;
+            }
+        }
+    }
+}
+.about {
+    position: relative;
+    @include flex(center, center);
+
+    .vertical__line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        height: 100px;
+        background-color: black;
+    }
+    &__container {
+        @include flex(center, center);
+        flex-direction: column;
+        background-color: $bg-gray;
+        width: 100%;
+        margin-top: calc(calc(100px / 2) + (50px / 2));
+        &__title {
+            font-size: 24px;
+            padding-top: 1%;
+        }
+
+        &__text {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
         }
     }
 }
@@ -102,6 +152,31 @@ $border-gray-nav: #dfdfdf;
 
         .mobile__hide {
             display: inherit;
+        }
+    }
+    .intro {
+        @include flex(center, center);
+        padding: 50px 0px;
+        &__container {
+            width: 73%;
+            &__title,
+            h1 {
+                font-size: 64px;
+            }
+
+            &__text,
+            p {
+                font-size: 24px;
+            }
+
+            &__video {
+                video {
+                    width: 48%;
+                }
+                .btn--watch--more {
+                    bottom: 3%;
+                }
+            }
         }
     }
 }
