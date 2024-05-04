@@ -4,97 +4,128 @@
  -->
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Design System</title>
-		<link rel="stylesheet" href="styles/globals.css" />
-		<link rel="stylesheet" href="styles/button.css" />
-		<link rel="stylesheet" href="styles/input.css" />
-		<link rel="stylesheet" href="styles/avatar.css" />
-	</head>
-	<body>
-		<div class="wrapper">
-			<h3 class="wrapper__title">Avatars</h3>
-			<div class="wrapper__content">
-				<div class="flex">
-					<!-- Conteúdo aqui -->
-					<div class="avatar avatar--sm">
-						<div class="avatar__image">
-							<img src="assets/user.jpeg" alt="user photo">
-						</div>
-					</div>
-					<div class="avatar avatar--md">
-						<div class="avatar__image">
-							<img src="assets/user.jpeg" alt="user photo">
-						</div>
-					</div>
-					<div class="avatar avatar--lg">
-						<div class="avatar__image">
-							<img src="assets/user.jpeg" alt="user photo">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Design System</title>
+        <link rel="stylesheet" href="styles/globals.css" />
+        <link rel="stylesheet" href="styles/button.css" />
+        <link rel="stylesheet" href="styles/input.css" />
+        <link rel="stylesheet" href="styles/avatar.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <h3 class="wrapper__title">Avatars</h3>
+            <div class="wrapper__content">
+                <div class="flex">
+                    <!-- Conteúdo aqui -->
+                    <div class="avatar avatar--sm">
+                        <div class="avatar__image">
+                            <img src="assets/user.jpeg" alt="user photo" />
+                        </div>
+                    </div>
+                    <div class="avatar avatar--md">
+                        <div class="avatar__image">
+                            <img src="assets/user.jpeg" alt="user photo" />
+                        </div>
+                    </div>
+                    <div class="avatar avatar--lg">
+                        <div class="avatar__image">
+                            <img src="assets/user.jpeg" alt="user photo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="wrapper">
-			<h3 class="wrapper__title">Buttons</h3>
-			<div class="wrapper__content">
-				<div class="flex">
-					<!-- Conteúdo aqui -->
-					<button class="btn button--primary">
-						<span class="button__text">
-							Label
-						</span>
-					</button>
-					<button class="btn button--primary--brand--outline">
-						<span class="button__icon">
-							<i class="zap--blue" data-feather="zap"></i>
-						</span>
-						<span class="button__text">
-							Label
-						</span>	
-					</button>
-					<button class="btn button--primary--destructive">
-						<span class="button__icon">
-							<i data-feather="zap"></i>
-						</span>
-						<span class="button__text">
-							Label
-						</span>	
-					</button>
-					<button class="btn button--primary--success">
-						<span class="button__text">
-							Label
-						</span>	
-						<span class="button__icon">
-							<i data-feather="zap"></i>
-						</span>
-						
-					</button>
-				</div>
-			</div>
-		</div>
+        <div class="wrapper">
+            <h3 class="wrapper__title">Buttons</h3>
+            <div class="wrapper__content">
+                <div class="flex">
+                    <!-- Conteúdo aqui -->
+                    <button class="btn button--primary">
+                        <span class="button__text"> Label </span>
+                    </button>
+                    <button class="btn button--primary--brand--outline">
+                        <span class="button__icon">
+                            <i class="zap--blue" data-feather="zap"></i>
+                        </span>
+                        <span class="button__text"> Label </span>
+                    </button>
+                    <button class="btn button--primary--destructive">
+                        <span class="button__icon">
+                            <i data-feather="zap"></i>
+                        </span>
+                        <span class="button__text"> Label </span>
+                    </button>
+                    <button class="btn button--primary--success">
+                        <span class="button__text"> Label </span>
+                        <span class="button__icon">
+                            <i data-feather="zap"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
 
-		<div class="wrapper">
-			<h3 class="wrapper__title">Inputs</h3>
-			<div class="wrapper__content">
-				<div class="flex">
-					<!-- Conteúdo aqui -->
-					<div class="input__group">
-						<label for="input__text">Field Label</label>
-						<input required="true" type="text" id="input__text" class="input__text" placeholder="Placeholder" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" invalid>
-						<div class="input__text input__text--error">
-							<span>Error label</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script>
-		feather.replace();
-	</script>
+        <div class="wrapper">
+            <h3 class="wrapper__title">Inputs</h3>
+            <div class="wrapper__content">
+                <div class="flex">
+                    <!-- Conteúdo aqui -->
+                    <div class="input__group">
+                        <label for="input__text">Field Label</label>
+                        <input
+                            required="true"
+                            type="text"
+                            id="input__text"
+                            class="input__text"
+                            placeholder="Placeholder"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            invalid
+                        />
+                        <div class="input__text input__text--error">
+                            <span>Error label</span>
+                        </div>
+                    </div>
+                    <div class="input__group input__group--search--right">
+                        <label for="input__text">Field Label</label>
+                        <input
+                            required="true"
+                            type="text"
+                            id="input__text"
+                            class="input__text"
+                            placeholder="Placeholder"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            invalid
+                        />
+
+                        <div class="input__text input__text--error">
+                            <span>Error label</span>
+                        </div>
+                    </div>
+                    <div class="input__group input__group--search--left">
+                        <label for="input__text">Field Label</label>
+                        <input
+                            required="true"
+                            type="text"
+                            id="input__text"
+                            class="input__text"
+                            placeholder="Placeholder"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            invalid
+                        />
+
+                        <div class="input__text input__text--error">
+                            <span>Error label</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
 </html>
