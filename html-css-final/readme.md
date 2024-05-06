@@ -1,4 +1,4 @@
-O objectivo é resumir toda a matéria em contexto de html e css.
+\O objectivo é resumir toda a matéria em contexto de html e css.
 
 A utilização do SASS fica ao teu critério, relembro só as vantagens do encapsulamento e da divisão das responsabilidades e na rapidez de propotipagem.
 
@@ -12,7 +12,7 @@ A pasta de assets tem todos os assets que precisas para realizar este mini proje
 ## Exercício 1
 
 Design:
-https://www.figma.com/file/fPjTeQXS41ftx77hGcFvUj/Website-Final?type=design&node-id=0%3A1&mode=design&t=cCDCFAX3JnithCoY-1
+https://www.figma.com/file/fPjTeQXS41ftx77hGcFv\Uj/Website-Final?type=design&node-id=0%3A1&mode=design&t=cCDCFAX3JnithCoY-1
 
 Requisitos:
 Representação da landing page em mobile e desktop.
@@ -23,9 +23,9 @@ Design: https://www.figma.com/file/sUXfDsMymzKpTzBffNGgEk/Edit---Loja?type=desig
 
 Requisitos:
 
-- Homepage
-- Página de Produto
-- Página de Categoria
+-   Homepage
+-   Página de Produto
+-   Página de Categoria
 
 Em todos os exemplos de design existe vista em desktop.
 Na página de produto falta o mobile, cabe-te a ti definires qual seria o mobile deste página e representares o que achas correto.
