@@ -577,6 +577,13 @@ body {
   .nav .mobile__hide {
     display: inherit;
   }
+  .nav .nav__item:hover {
+    color: #0064da;
+  }
+  .nav .nav__item--signup:hover {
+    color: white;
+    background-color: #0064da;
+  }
   .intro {
     display: flex;
     align-items: center;
@@ -593,6 +600,12 @@ body {
   .intro__container__text,
   .intro__container p {
     font-size: 24px;
+  }
+  .intro__container__btn .btn--trial:hover {
+    background-color: #000000;
+  }
+  .intro__container__btn .btn--learn:hover {
+    background-color: #0064da;
   }
   .intro__container__video video {
     max-width: 600px;
@@ -663,6 +676,10 @@ body {
     justify-content: space-between;
     flex-direction: row;
   }
+  .advertising__content .btn--advertising:hover {
+    color: white;
+    background-color: #000000;
+  }
   .subscribe__header,
   .footer__category__header {
     font-weight: 700;
@@ -685,6 +702,9 @@ body {
   }
   .footer .footer__columns .footer__category__header {
     padding: 8px;
+  }
+  .footer .footer__columns ul .footer__category__item:hover {
+    color: #0064da;
   }
   .footer .footer__columns ul .footer__category__item:nth-child(1) {
     padding-top: 32px;

@@ -558,6 +558,13 @@ body {
         .mobile__hide {
             display: inherit;
         }
+        .nav__item:hover {
+            color: $blue-color;
+        }
+        .nav__item--signup:hover {
+            color: white;
+            background-color: $blue-color;
+        }
     }
     .intro {
         @include flex(center, center);
@@ -572,6 +579,14 @@ body {
             &__text,
             p {
                 font-size: 24px;
+            }
+            &__btn {
+                .btn--trial:hover {
+                    background-color: $black-color;
+                }
+                .btn--learn:hover {
+                    background-color: $blue-color;
+                }
             }
 
             &__video {
@@ -650,6 +665,10 @@ body {
             width: 95%;
             @include flex(center, space-between);
             flex-direction: row;
+            .btn--advertising:hover {
+                color: white;
+                background-color: $black-color;
+            }
         }
     }
     .subscribe__header,
@@ -670,6 +689,9 @@ body {
                 padding: 8px;
             }
             ul {
+                .footer__category__item:hover {
+                    color: $blue-color;
+                }
                 .footer__category__item:nth-child(1) {
                     padding-top: 32px;
                 }
