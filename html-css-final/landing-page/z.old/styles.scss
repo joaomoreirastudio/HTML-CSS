@@ -306,9 +306,9 @@ body {
         .video__container {
             width: 100%;
             height: 500px;
-            overflow: hidden;
-            // video {
-            // }
+            video {
+                height: 475px;
+            }
         }
         .card__wrapper {
             @include flex(center, center);
@@ -316,11 +316,10 @@ body {
             gap: 16px;
             position: absolute;
             top: -24px;
-            max-width: 600px;
 
             .card__box {
                 background: white;
-                max-width: 180px;
+                width: 40%;
                 @include flex(center, center);
                 flex-direction: column;
                 text-align: center;
@@ -346,196 +345,7 @@ body {
                     text-align: center;
                 }
             }
-            .card__box:hover {
-                background: $blue-color;
-                color: white;
-                border: none;
-                .card__box__circle {
-                    background: white;
-                }
-            }
         }
-    }
-}
-.articles {
-    @include flex(center, center);
-    flex-direction: column;
-    &__header {
-        max-width: 350px;
-        padding: 24px 0 24px 0;
-    }
-    .btn--articles {
-        border-radius: 32px;
-        background-color: white;
-        color: black;
-        border: 0.5px solid rgba(236, 235, 235, 1);
-        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
-    }
-    .btn--articles:hover {
-        background-color: $blue-color;
-        color: white;
-    }
-    .btn--articles:active {
-        background-color: $blue-color;
-        color: white;
-    }
-
-    &__nav {
-        @include flex(center, center);
-        gap: 16px;
-        .btn--articles--nav {
-            font-size: 10px;
-        }
-    }
-    .article__container {
-        @include flex(center, center);
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 14px;
-        padding: 48px 0;
-        &__nav {
-            width: 100%;
-        }
-        .article {
-            width: 230px;
-            // flex-wrap: wrap;
-
-            .article__content {
-                width: 100%;
-                .article__image {
-                    background: rgba(196, 196, 196, 1);
-
-                    width: 100%;
-                    height: 130px;
-                }
-                .btn--articles--content {
-                    font-size: 8px;
-                    margin: 8px 0;
-                }
-                .article__title {
-                    font-size: 10px;
-                }
-                .article__author {
-                    display: flex;
-                    align-items: center;
-                    padding-top: 8px;
-                    flex-direction: row;
-                    gap: 8px;
-                    .author__image {
-                        width: 20px;
-                        height: 20px;
-                        background-color: #000000;
-                        border-radius: 13px;
-                        overflow: hidden;
-                        display: flex;
-                        justify-content: center;
-
-                        img {
-                            height: 100%;
-                            text-align: center;
-                        }
-                    }
-                    .author {
-                        font-size: 8px;
-                    }
-                }
-            }
-        }
-    }
-}
-.advertising {
-    background-color: $blue-color;
-    color: white;
-    padding: 10px;
-    height: 380px;
-    @include flex(center, center);
-    &__content {
-        @include flex(center, center);
-        flex-direction: column;
-
-        span {
-            font-size: 32px;
-            padding: 16px;
-        }
-        .btn--advertising {
-            font-size: 14px;
-            font-weight: 400px;
-            color: $blue-color;
-            background: white;
-            padding: 8px 16px;
-        }
-    }
-}
-
-.subscribe__header,
-.footer__category__header {
-    font-weight: 700;
-    font-size: 16px;
-    padding-top: 16px;
-}
-.breakline {
-    border-bottom: 1px solid #dfdfdf;
-    // background-color: ;
-    padding-top: 40px;
-    width: 100%;
-}
-
-.footer {
-    .subscribe {
-        @include flex(center, center);
-        flex-direction: column;
-
-        .subscribe__inputsection {
-            max-width: 700px;
-            @include flex(center, center);
-            gap: 8px;
-            padding-top: 24px;
-            .subscribe__input {
-                height: 33px;
-                padding: 8px;
-                width: 240px;
-                border: 1px solid $border-gray;
-                border-radius: 3px;
-            }
-            input::placeholder {
-                font-size: 14px;
-                color: rgba(0, 0, 0, 0.5);
-            }
-
-            .btn--input {
-                background-color: $black-color;
-                color: white;
-                font-size: 14px;
-                font-weight: 400;
-            }
-            .btn--input:hover {
-                background-color: $blue-color;
-                box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
-            }
-        }
-        .subscribe__text {
-            font-size: 14px;
-            font-weight: 400px;
-            padding: 16px 0;
-        }
-    }
-    .footer__columns {
-        @include flex(center, center);
-        text-align: center;
-        gap: 40px;
-        .footer__category__header {
-            padding: 16px;
-        }
-        ul {
-            padding: 8px;
-            li.footer__category__item {
-                padding: 8px 0;
-            }
-        }
-    }
-    .footer__image {
-        @include flex(center, center);
-        padding: 16px 0;
     }
 }
 
@@ -600,83 +410,6 @@ body {
                     width: 100%;
                 }
             }
-        }
-    }
-    .cards {
-        .cards__container {
-            @include flex(center, center);
-            justify-content: center;
-            .video__container {
-                height: 320px;
-
-                video {
-                    width: 100vw;
-                }
-            }
-            .card__wrapper {
-                align-items: center;
-                .card__box:hover {
-                    animation: card__move;
-                    animation-duration: 0.5s;
-                    animation-direction: alternate;
-                    // animation-iteration-count: infinite;
-                    animation-timing-function: ease-in-out;
-                    animation-fill-mode: forwards;
-                }
-                @keyframes card__move {
-                    100% {
-                        transform: translateY(-10px);
-                    }
-                }
-            }
-        }
-    }
-    .articles {
-        &__header {
-            max-width: 100%;
-            padding: 24px 0 0 0;
-        }
-        &__nav {
-            .btn--articles--nav {
-                font-size: 12px;
-            }
-        }
-    }
-    .advertising {
-        margin: auto;
-        height: 240px;
-        width: 90%;
-        &__content {
-            width: 95%;
-            @include flex(center, space-between);
-            flex-direction: row;
-        }
-    }
-    .subscribe__header,
-    .footer__category__header {
-        font-weight: 700;
-        font-size: 16px;
-        padding-top: 0;
-    }
-    .footer {
-        padding: 48px;
-        @include flex(flex-start, space-between);
-        .subscribe {
-            @include flex(start, flex-start);
-        }
-        .footer__columns {
-            text-align: left;
-            .footer__category__header {
-                padding: 8px;
-            }
-            ul {
-                .footer__category__item:nth-child(1) {
-                    padding-top: 32px;
-                }
-            }
-        }
-        .footer__image {
-            padding: 0;
         }
     }
 }
