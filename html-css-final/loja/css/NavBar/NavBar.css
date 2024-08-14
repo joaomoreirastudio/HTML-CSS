@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+body {
+  font-family: inter;
+}
+
+.navbar {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 2rem;
+  padding: 1.5rem;
+}
+.navbar__logo {
+  background: #8a2d2d;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 0.25rem;
+}
+.navbar__menu {
+  display: none;
+  font-size: 0.9rem;
+}
+.navbar__menu a {
+  text-decoration: none;
+  list-style: none;
+  color: #000000;
+}
+.navbar__menu.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 1rem 0 1rem 0;
+  z-index: 1;
+}
+.navbar__menu.active li {
+  padding: 0.5rem;
+}
+
+.hamburger {
+  font-size: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: initial;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=NavBar.css.map */
